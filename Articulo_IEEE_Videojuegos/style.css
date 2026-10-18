@@ -1,0 +1,175 @@
+/* --- Modelo de caja y página --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #1A1A1A;
+    background-color: #F4F4F4;
+}
+
+.articulo {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #CCCCCC;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+}
+
+#articulo {
+    width: 100%;
+}
+
+/* --- Encabezado y datos del autor --- */
+header {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+.autor {
+    font-size: 14px;
+    text-align: center;
+    margin: 0 0 6px 0;
+}
+
+.afiliacion,
+.contacto {
+    font-size: 12px;
+    text-align: center;
+    margin: 0 0 6px 0;
+}
+
+/* --- Títulos --- */
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+    color: #0B3C5D;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 8px 0;
+}
+
+h2 {
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: left;
+    margin: 24px 0 12px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #CCCCCC;
+}
+
+h3 {
+    font-size: 14px;
+    color: #1D6A9E;
+    text-align: left;
+    margin: 16px 0 8px 0;
+}
+
+/* --- Párrafos, resumen y palabras clave --- */
+p {
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: justify;
+    margin: 0 0 12px 0;
+}
+
+.resumen {
+    font-size: 11px;
+    font-style: italic;
+    text-align: justify;
+    border-left: 4px solid #0B3C5D;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+}
+
+.palabras-clave {
+    font-size: 11px;
+    font-style: italic;
+    margin-bottom: 16px;
+}
+
+/* --- Listas y procedimiento --- */
+.criterios {
+    margin: 0 0 12px 0;
+    padding-left: 28px;
+    line-height: 1.5;
+}
+
+/* --- Tablas --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+}
+
+th,
+td {
+    border: 1px solid #CCCCCC;
+    padding: 8px;
+    vertical-align: top;
+}
+
+th {
+    background-color: #EFEFEF;
+    color: #0B3C5D;
+    text-align: left;
+}
+
+.titulo-tabla,
+figcaption {
+    font-size: 11px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* --- Figuras (por si se añade una imagen opcional) --- */
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* --- Referencias y enlaces --- */
+.referencias {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.referencias li {
+    font-size: 11px;
+    padding-left: 24px;
+    text-indent: -24px;
+}
+
+a {
+    color: #1D6A9E;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+a:hover {
+    color: #C0392B;
+    text-decoration: underline;
+}
+
+/* --- Pie de página --- */
+footer {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid #CCCCCC;
+}
