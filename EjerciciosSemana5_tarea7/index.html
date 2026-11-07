@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarea 7 - Inventario de productos</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor">
+      <p class="subtitulo">DESARROLLO WEB · MÓDULO 7</p>
+      <h1>Inventario de productos</h1>
+      <p>Agregá productos, revisá existencias y administrá el inventario.</p>
+    </div>
+  </header>
+
+  <main class="contenedor contenido">
+    <section class="resumen" aria-label="Resumen del inventario">
+      <div class="indicador">
+        <span>Productos</span>
+        <strong id="total-productos">0</strong>
+      </div>
+      <div class="indicador">
+        <span>Unidades</span>
+        <strong id="total-unidades">0</strong>
+      </div>
+      <div class="indicador">
+        <span>Valor total</span>
+        <strong id="valor-total">$0.00</strong>
+      </div>
+      <div class="indicador">
+        <span>Agotados</span>
+        <strong id="total-agotados">0</strong>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-agregar">
+      <h2 id="titulo-agregar">Agregar producto</h2>
+      <form id="formulario-producto" novalidate>
+        <div class="campos">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Agenda semanal">
+          </div>
+          <div class="campo">
+            <label for="categoria">Categoría</label>
+            <input type="text" id="categoria" name="categoria" placeholder="Ej. Papelería">
+          </div>
+          <div class="campo">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" name="cantidad" min="1" step="1" placeholder="Ej. 10">
+          </div>
+          <div class="campo">
+            <label for="precio">Precio ($)</label>
+            <input type="number" id="precio" name="precio" min="0" step="0.01" placeholder="Ej. 5.50">
+          </div>
+        </div>
+        <div class="acciones-formulario">
+          <p id="mensaje-error" role="alert" hidden></p>
+          <button type="submit" class="boton-principal">Agregar producto</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="titulo-inventario">
+      <div class="encabezado-tabla">
+        <div>
+          <h2 id="titulo-inventario">Productos registrados</h2>
+          <p class="texto-secundario">Los indicadores muestran los productos visibles según el filtro.</p>
+        </div>
+        <div class="campo campo-filtro">
+          <label for="filtro-categoria">Filtrar por categoría</label>
+          <select id="filtro-categoria">
+            <option value="todas">Todas</option>
+          </select>
+        </div>
+      </div>
+      <div class="tabla-contenedor">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Categoría</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Subtotal</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-inventario"></tbody>
+        </table>
+      </div>
+      <p id="mensaje-vacio" class="mensaje-vacio" hidden>No hay productos en esta categoría.</p>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">Tarea 7 · Manipulación del DOM con JavaScript</div>
+  </footer>
+</body>
+</html>

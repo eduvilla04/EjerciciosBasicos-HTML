@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f6f5;
+  color: #202020;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.contenedor {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.encabezado {
+  padding: 42px 0 38px;
+  background: #fff;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.subtitulo {
+  margin: 0 0 12px;
+  color: #787878;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  letter-spacing: -0.7px;
+}
+
+.encabezado p:last-child {
+  margin: 0;
+  color: #686868;
+}
+
+.contenido {
+  padding-top: 28px;
+  padding-bottom: 38px;
+}
+
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.indicador, .panel {
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 10px;
+}
+
+.indicador {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 20px;
+}
+
+.indicador span {
+  color: #777;
+  font-size: 13px;
+}
+
+.indicador strong {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.panel {
+  padding: 24px;
+  margin-bottom: 22px;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+input, select {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background: white;
+  color: #242424;
+  font: inherit;
+}
+
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid #555;
+  outline-offset: 2px;
+}
+
+.acciones-formulario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
+
+.boton-principal {
+  margin-left: auto;
+  padding: 12px 20px;
+  border: 1px solid #202020;
+  border-radius: 6px;
+  background: #202020;
+  color: #fff;
+  font-weight: 600;
+}
+
+.boton-principal:hover {
+  background: #414141;
+}
+
+#mensaje-error {
+  margin: 0;
+  color: #b52d2d;
+  font-size: 13px;
+}
+
+.encabezado-tabla {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.encabezado-tabla h2 {
+  margin: 0 0 7px;
+}
+
+.texto-secundario {
+  margin: 0;
+  color: #858585;
+  font-size: 12px;
+}
+
+.campo-filtro {
+  width: 210px;
+  flex-shrink: 0;
+}
+
+.tabla-contenedor {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th, td {
+  padding: 14px 12px;
+  border-bottom: 1px solid #ececec;
+  vertical-align: middle;
+}
+
+th {
+  background: #f8f8f8;
+  color: #6b6b6b;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+td {
+  font-size: 13px;
+}
+
+td:first-child {
+  font-weight: 600;
+  min-width: 155px;
+}
+
+.fila-agotada {
+  background: #fcf7f7;
+}
+
+.estado-disponible {
+  color: #237348;
+  font-weight: 600;
+}
+
+.estado-agotado {
+  color: #b34343;
+  font-weight: 600;
+}
+
+.acciones-tabla {
+  white-space: nowrap;
+}
+
+.btn-estado, .btn-eliminar {
+  padding: 7px 9px;
+  border: 1px solid #dcdcdc;
+  border-radius: 5px;
+  background: #fff;
+  font-size: 12px;
+}
+
+.btn-eliminar {
+  margin-left: 6px;
+  color: #b12c2c;
+}
+
+.btn-estado:hover, .btn-eliminar:hover {
+  background: #f0f0f0;
+}
+
+.mensaje-vacio {
+  padding: 24px;
+  text-align: center;
+  color: #777;
+}
+
+.pie-pagina {
+  padding: 22px 0;
+  border-top: 1px solid #e3e3e3;
+  color: #888;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .resumen, .campos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .contenedor {
+    width: calc(100% - 28px);
+  }
+
+  .encabezado {
+    padding: 32px 0;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .panel {
+    padding: 16px;
+  }
+
+  .resumen {
+    gap: 10px;
+  }
+
+  .indicador {
+    padding: 14px;
+  }
+
+  .indicador strong {
+    font-size: 21px;
+  }
+
+  .campos {
+    grid-template-columns: 1fr;
+  }
+
+  .encabezado-tabla {
+    flex-direction: column;
+  }
+
+  .campo-filtro {
+    width: 100%;
+  }
+
+  .acciones-formulario {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .boton-principal {
+    margin-left: 0;
+  }
+}
